@@ -30,3 +30,12 @@ void tokeniseRecordModified(char *input, const char *delimeter,
 
   free(inputCopy);
 }
+
+FILE *open_file(char filename[], char mode[]) {
+  FILE *file = fopen(filename, mode);
+  if (file == NULL) {
+    perror("");
+    exit(EXIT_FAILURE);
+  }
+  return file;
+}

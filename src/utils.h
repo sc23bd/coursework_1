@@ -14,4 +14,6 @@ typedef struct {
 void tokeniseRecordModified(char *input, const char *delimeter,
                             FITNESS_DATA *record);
 
+FILE *openFile(char fileName[], char mode[]);
+
 #endif // !UTILS_H
