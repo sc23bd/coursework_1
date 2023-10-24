@@ -26,5 +26,6 @@ int main(int argc, char *argv[]) {
   // printf("Time: %s\n", records.time);
   // printf("Steps: %s\n", records.steps);
 
+  fclose(file);
   return EXIT_SUCCESS;
 }
