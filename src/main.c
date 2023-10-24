@@ -21,6 +21,9 @@ int main(int argc, char *argv[]) {
   // }
 
   printf("Number of records in file: %d\n", i);
+  for (int a = 0; a < 3; a++) {
+    printf("%s/%s/%s\n", records[a].date, records[a].time, records[a].steps);
+  }
 
   fclose(file);
   return EXIT_SUCCESS;
