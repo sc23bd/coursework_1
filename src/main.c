@@ -14,17 +14,13 @@ int main(int argc, char *argv[]) {
     i++;
   }
 
-  for (int j = 0; j < i; j++) {
-    printf("Date: %s\n", records[j].date);
-    printf("Time: %s\n", records[j].time);
-    printf("Steps: %s\n", records[j].steps);
-  }
+  // for (int j = 0; j < i; j++) {
+  //   printf("Date: %s\n", records[j].date);
+  //   printf("Time: %s\n", records[j].time);
+  //   printf("Steps: %s\n", records[j].steps);
+  // }
 
-  // tokeniseRecordModified("2020-01-01,12:00,1000", ",", &records);
-  //
-  // printf("Date: %s\n", records.date);
-  // printf("Time: %s\n", records.time);
-  // printf("Steps: %s\n", records.steps);
+  printf("Number of records in file: %d\n", i);
 
   fclose(file);
   return EXIT_SUCCESS;
