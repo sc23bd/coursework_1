@@ -4,13 +4,14 @@
 #include <string.h>
 
 int main(int argc, char *argv[]) {
-  FITNESS_DATA records;
+  FITNESS_DATA records[512];
+  FILE *file = open_file("../static/data.csv", "r");
 
-  tokeniseRecordModified("2020-01-01,12:00,1000", ",", &records);
-
-  printf("Date: %s\n", records.date);
-  printf("Time: %s\n", records.time);
-  printf("Steps: %s\n", records.steps);
+  // tokeniseRecordModified("2020-01-01,12:00,1000", ",", &records);
+  //
+  // printf("Date: %s\n", records.date);
+  // printf("Time: %s\n", records.time);
+  // printf("Steps: %s\n", records.steps);
 
   return EXIT_SUCCESS;
 }
