@@ -5,7 +5,7 @@
 
 int main(int argc, char *argv[]) {
   FITNESS_DATA records[512];
-  FILE *file = open_file("../static/data.csv", "r");
+  FILE *file = openFile("../static/data.csv", "r");
 
   // tokeniseRecordModified("2020-01-01,12:00,1000", ",", &records);
   //
