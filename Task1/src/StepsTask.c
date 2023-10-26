@@ -52,7 +52,7 @@ FILE *openFile(char filename[], char mode[]) {
 
 int main(int argc, char *argv[]) {
   FITNESS_DATA records[512];
-  FILE *file = openFile("../static/FitnessData_2023.csv", "r");
+  FILE *file = openFile("FitnessData_2023.csv", "r");
 
   char line_buffer[512];
   int i = 0;
