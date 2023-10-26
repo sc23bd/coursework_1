@@ -1,5 +1,7 @@
 #include "utils.h"
 
+// modified to take in a pointer to record struct rather 
+// than the individual fields
 void tokeniseRecordModified(char *input, const char *delimeter,
                             FITNESS_DATA *record) {
   char *inputCopy = strdup(input);
