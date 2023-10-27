@@ -5,7 +5,7 @@
 typedef struct {
   char date[11];
   char time[6];
-  char steps[10];
+  int steps;
 } FITNESS_DATA;
 
 // modified to take in a pointer to record struct rather
@@ -35,7 +35,7 @@ void tokeniseRecordModified(char *input, const char *delimeter,
     perror("Invalid input");
     return;
   } else {
-    strcpy(record->steps, token);
+    record->steps = atoi(token);
   }
 
   free(inputCopy);
@@ -68,9 +68,9 @@ int main(int argc, char *argv[]) {
   // }
 
   printf("Number of records in file: %d\n", i);
-  for (int a = 0; a < 3; a++) {
-    printf("%s/%s/%s", records[a].date, records[a].time, records[a].steps);
-  }
+  printf("%s/%s/%d\n", records[0].date, records[0].time, records[0].steps);
+  printf("%s/%s/%d\n", records[1].date, records[1].time, records[1].steps);
+  printf("%s/%s/%d\n", records[2].date, records[2].time, records[2].steps);
 
   fclose(file);
   return EXIT_SUCCESS;
